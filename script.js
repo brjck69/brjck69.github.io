@@ -63,8 +63,8 @@ function updateTileRatio() {
   const browserWidth = document.body.clientWidth;
   const browserHeight = document.body.clientHeight;
   const browserRatio = browserWidth / browserHeight;
-  const imageWidth = 1920; 
-  const imageHeight = 1080;
+  const imageWidth = 960; 
+  const imageHeight = 540;
   const imageRatio = imageWidth / imageHeight;
   const tileImages = document.querySelectorAll(".tile__img");
 
