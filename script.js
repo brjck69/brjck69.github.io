@@ -9,25 +9,25 @@ $(document).ready(function(){
 const tiles = [
   {
     image:
-      "images/hero1.jpg",
+      "images/hero1.webp",
     thumb:
-      "images/hero1-thumbs.jpg",
+      "images/hero1-thumbs.webp",
     title: "Reog, Indonesian culture <br />that has worldwide.",
     nextTitle: "Reog <br />Ponorogo"
   },
   {
     image:
-      "images/hero2.jpg",
+      "images/hero2.webp",
     thumb:
-      "images/hero2-thumbs.jpg",
+      "images/hero2-thumbs.webp",
     title: "Rise. Renew. <br />Recover.",
     nextTitle: "Cumbri <br />Hill"
   },
   {
     image:
-      "images/hero3.jpg",
+      "images/hero3.webp",
     thumb:
-      "images/hero3-thumbs.jpg",
+      "images/hero3-thumbs.webp",
     title: "Show Ponorogo City <br />your love.",
     nextTitle: "Klono <br />Sewandono"
   }
@@ -204,6 +204,15 @@ window.addEventListener('scroll', function(){
 $(document).ready(function(){
   $(window).scroll(function(){
     if(this.scrollY > 20) 
+      $(".headerpage").addClass("hide");
+    else
+      $(".headerpage").removeClass("hide");
+  });
+});
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+    if(this.scrollY > 20) 
       $(".navbar").addClass("sticky");
     else
       $(".navbar").removeClass("sticky");
@@ -297,13 +306,6 @@ $('.mini-info.owl-carousel').owlCarousel({
           items: 8
       },
   }
-});
-
-$(document).ready(function() {
-  $('.partner .items').magnificPopup({
-    type:'image',
-    delegate: 'a'
-  });
 });
 
 $(document).ready(function() {
