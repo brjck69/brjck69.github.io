@@ -12,15 +12,15 @@ const tiles = [
       "images/hero1.webp",
     thumb:
       "images/hero1-thumbs.webp",
-    title: "Reog, Indonesian culture <br />that has worldwide.",
+    title: "Menuju Ponorogo yang Lebih<br />Maju. Berbudaya .& Religius.",
     nextTitle: "Reog <br />Ponorogo"
   },
   {
     image:
       "images/hero2.webp",
     thumb:
-      "images/hero2-thumbs.webp",
-    title: "Rise. Renew. <br />Recover.",
+      "images/hero2-thumbs.webp",  
+    title: "Show Ponorogo City <br />your love.",
     nextTitle: "Cumbri <br />Hill"
   },
   {
@@ -28,7 +28,7 @@ const tiles = [
       "images/hero3.webp",
     thumb:
       "images/hero3-thumbs.webp",
-    title: "Show Ponorogo City <br />your love.",
+    title: "Manunggale Cipto. Roso. Karso<br />Agawe Rahayuning Bumi Reyog.",
     nextTitle: "Klono <br />Sewandono"
   }
 ];
@@ -195,6 +195,12 @@ function hidemodal() {
     modal.style.bottom = "-300px";
     modal.style.opacity = "0";
 }
+
+var headertitle = document.querySelector("header .title");
+window.addEventListener('scroll' , function(){
+    let value = 1 + window.scrollY/-500;
+    headertitle.style.opacity = value;
+});
 
 window.addEventListener('scroll', function(){
     var scroll = this.document.querySelector('.back-to-up');
