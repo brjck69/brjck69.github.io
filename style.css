@@ -739,7 +739,15 @@ header img.next-tile__preview__img--last {
     position: relative;
     width: 25%;
     height: 180px;
-    overflow: hidden;   
+    overflow: hidden; 
+    opacity: 0;  
+    transform: translate(0, -40px);
+    transition: .4s ease-in-out;
+}
+
+#four-info .item.appear {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 #four-info .item .item_bg {
@@ -787,15 +795,20 @@ header img.next-tile__preview__img--last {
     font-weight: bold;
 }
 
-#whats-hot .title-whats-hot:after {
+#whats-hot .title-whats-hot .line-effect {
     content: "";
     position: absolute;
     bottom: -10px;
     left: 0;
-    width: 120px;
+    width: 0;
     height: 7px;
     background: linear-gradient(to right, rgb(171,129,0) , rgb(203,156,0));
     border-radius: 2px;
+    transition: .4s ease-in-out;
+}
+
+#whats-hot .title-whats-hot .line-effect.width {
+    width: 120px;
 }
 
 #whats-hot .whats-hot {
@@ -977,15 +990,20 @@ header img.next-tile__preview__img--last {
     padding-top: 20px;
 }
 
-#top-recom .title-top-recom:after {
+#top-recom .title-top-recom .line-effect {
     content: "";
     position: absolute;
     bottom: -10px;
     left: 0;
-    width: 170px;
+    width: 0;
     height: 7px;
     background: linear-gradient(to right, rgb(171,129,0) , rgb(203,156,0));
     border-radius: 2px;
+    transition: .4s ease-in-out;
+}
+
+#top-recom .title-top-recom .line-effect.width {
+    width: 170px;
 }
 
 #top-recom .top-recom {
@@ -1209,44 +1227,54 @@ header img.next-tile__preview__img--last {
 
 .partner {
     position: relative;
-    height: auto;
+    width: 100%;
     margin-bottom: 40px;
-    background: rgb(1,2,54);
 }
 
 .partner .title-partner {
     display: block;
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
     position: relative;
     font-weight: bold;
-    color: #fff;
-    padding-top: 20px;
+    color: rgb(1,2,54);
+    margin: 20px 0 40px;
 }
 
-.partner .title-partner:after {
+.partner .title-partner .line-effect {
     content: "";
     position: absolute;
     transform: translateX(-50%) translateY(-50%);
     bottom: -20px;
     left: 50%;
-    width: 90px;
+    width: 0;
     height: 7px;
     background: linear-gradient(to right, rgb(171,129,0) , rgb(203,156,0));
     border-radius: 2px;
     z-index: 1;
+    transition: .4s ease-in-out;
 }
 
-.partner .items {
+.partner .title-partner .line-effect.width {
+    width: 100px;
+}
+
+.partner .video-container {
     position: relative;
-    width: 75%;
+    width: 90%;
     margin: auto;
-    padding: 50px 0;
-    z-index: 1;
+    padding-bottom: 50.50%;
+    overflow: hidden;
 }
 
-.partner .items .owl-carousel img {
-    position: relative;
+.partner .video-container iframe,
+.partner .video-container object,
+.partner .video-container embed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .mini-info {
