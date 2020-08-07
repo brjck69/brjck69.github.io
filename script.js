@@ -322,4 +322,28 @@ $(window).scroll(function() {
     })
   }
 
+  if( wScroll > $('#whats-hot').offset().top - 250 ) {
+    $('#whats-hot .whats-hot .item').each(function(i) {
+      setTimeout(function() {
+        $('#whats-hot .whats-hot .item').eq(i).addClass('appear');
+      }, 300 * (i+1));
+    })
+  }
+
+  if( wScroll > $('#top-recom').offset().top - 250 ) {
+    $('#top-recom .top-recom .item .animate').each(function(i) {
+      setTimeout(function() {
+        $('#top-recom .top-recom .item .animate').eq(i).addClass('appear');
+      }, 300 * (i+1));
+    })
+  }
+
+  if( wScroll > $('.partner').offset().top - 250 ) {
+    $('.partner .video-container').each(function(i) {
+      setTimeout(function() {
+        $('.partner .video-container').eq(i).addClass('appear');
+      }, 300 * (i+1));
+    })
+  }
+
 });
